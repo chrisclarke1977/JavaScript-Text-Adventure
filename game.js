@@ -10,7 +10,7 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  textElement.innerText = textNode.text
+  textElement.innerText = textNode.text + JSON.stringify(state);
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
@@ -155,8 +155,12 @@ const textNodes = [
     text: 'Your attempts to run are in vain and the monster easily catches.',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Hide',
+        nextText: 12
+      },
+      {
+        text: 'Keep running',
+        nextText: 13
       }
     ]
   },
@@ -187,6 +191,26 @@ const textNodes = [
       {
         text: 'Congratulations. Play Again.',
         nextText: -1
+      }
+    ]
+  },
+    {
+    id: 12,
+    text: 'Your attempt to hide failed and you were made to mince meat.',
+    options: [
+      {
+        text: 'Restart.',
+        nextText: -1
+      }
+    ]
+  },
+    {
+    id: 13,
+    text: 'You keep going until you find yourself lost and dazed.',
+    options: [
+      {
+        text: 'Stumble around.',
+        nextText: 1
       }
     ]
   }
