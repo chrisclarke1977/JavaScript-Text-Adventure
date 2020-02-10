@@ -146,7 +146,8 @@ const textNodes = [
       {
         text: 'Throw the blue goo at it',
         requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
+        nextText: 11,
+        setState: { castle: true }
       }
     ]
   },
@@ -191,6 +192,10 @@ const textNodes = [
       {
         text: 'Congratulations. Play Again.',
         nextText: -1
+      },
+      {
+        text: 'What comes now?',
+        nextText: 14
       }
     ]
   },
@@ -210,6 +215,34 @@ const textNodes = [
     options: [
       {
         text: 'Stumble around.',
+        nextText: 1
+      }
+    ]
+  },
+    {
+    id: 14,
+    text: 'After a while feeling safe and comfortable in your castle you decide its time for a change.',
+    options: [
+      {
+        text: 'Go on a Quest.',
+        nextText: 15
+      },
+      {
+        text: 'Try to find more goo',
+        nextText: 1
+      }
+    ]
+  },
+    {
+    id: 15,
+    text: 'You find a castle surrounded by a moat.',
+    options: [
+      {
+        text: 'Explore the surrounding.',
+        nextText: -1
+      },
+      {
+        text: 'Explore the castle',
         nextText: 1
       }
     ]
