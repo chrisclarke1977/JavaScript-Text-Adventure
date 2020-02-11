@@ -10,7 +10,7 @@ function startGame() {
   showInventory({})
 }
 
-function showInvetory(inv) {
+function showInventory(inv) {
   Object.keys(inv).forEach(i => {
     const icon = document.createElement('img')
     icon.src = {
