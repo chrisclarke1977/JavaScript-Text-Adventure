@@ -11,17 +11,16 @@ function startGame() {
 }
 
 function showInvetory(inv) {
-  Object.keys(inv).forEach(i => 
-   {
-                         const icon = document.createElement('img')
-    icon.src = ({
+  Object.keys(inv).forEach(i => {
+    const icon = document.createElement('img')
+    icon.src = {
       blueGoo: 'bluegoo-icon.svg',
       sword: 'sword-icon.svg',
       shield: 'shield-icon.svg',
-      castle: 'castle-icon.svg'}[i])
-    )
+      castle: 'castle-icon.svg'}[i]
+    
     inventoryElement.appendChild(icon)
-    }
+  })
     
 }
 
