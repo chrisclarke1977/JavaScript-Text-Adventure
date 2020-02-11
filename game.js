@@ -12,7 +12,8 @@ function startGame() {
 
 function showInvetory(inv) {
   Object.keys(inv).forEach(i => 
-    const icon = document.createElement('img')
+   {
+                         const icon = document.createElement('img')
     icon.src = ({
       blueGoo: 'bluegoo-icon.svg',
       sword: 'sword-icon.svg',
@@ -20,6 +21,8 @@ function showInvetory(inv) {
       castle: 'castle-icon.svg'}[i])
     )
     inventoryElement.appendChild(icon)
+    }
+    
 }
 
 function showTextNode(textNodeIndex) {
