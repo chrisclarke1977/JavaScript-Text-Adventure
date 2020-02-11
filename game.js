@@ -7,10 +7,10 @@ let state = {}
 function startGame() {
   state = {}
   showTextNode(1)
-  showInventory({})
+  showInv({})
 }
 
-function showInventory(inv) {
+function showInv(inv) {
   Object.keys(inv).forEach(i => {
     const icon = document.createElement('img')
     icon.src = {
@@ -53,7 +53,7 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState)
   showTextNode(nextTextNodeId)
-  showInventory(state)
+  showInv(state)
 }
 
 const textNodes = [
