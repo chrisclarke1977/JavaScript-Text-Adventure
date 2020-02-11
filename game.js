@@ -12,7 +12,7 @@ function startGame() {
 
 function showInv(inv) {
   const things = ["sword", "shield", "bluegoo", "crown", "redpotion", "blooddrop", "goldcoin", "castle", "crown"];
-  icons = document.querySelector(".icons");
+  const icons = document.querySelector(".icons");
   
   Object.keys(things).forEach(i => icons.getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
   Object.keys(inv).forEach(i => icons.getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] !== true ? "hidden" : "visible" )
