@@ -1,11 +1,25 @@
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
+const inventoryElement = document.getElementById('inventory')
 
 let state = {}
 
 function startGame() {
   state = {}
   showTextNode(1)
+  showInventory({})
+}
+
+function showInvetory(inv) {
+  Object.keys(inv).forEach(i => 
+    const icon = document.createElement('img')
+    icon.src = ({
+      blueGoo: 'bluegoo-icon.svg',
+      sword: 'sword-icon.svg',
+      shield: 'shield-icon.svg',
+      castle: 'castle-icon.svg'}[i])
+    )
+    inventoryElement.appendChild(icon)
 }
 
 function showTextNode(textNodeIndex) {
@@ -37,6 +51,7 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState)
   showTextNode(nextTextNodeId)
+  showInventory(state)
 }
 
 const textNodes = [
