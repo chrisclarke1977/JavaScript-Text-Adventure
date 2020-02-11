@@ -11,7 +11,7 @@ function startGame() {
 }
 
 function showInv(inv) {
-  Object.keys(inv).forEach(i => document.querySelector("object").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "none" )
+  Object.keys(inv).forEach(i => document.querySelector("object").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
 }
 
 function showTextNode(textNodeIndex) {
