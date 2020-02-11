@@ -13,9 +13,10 @@ function startGame() {
 function showInv(inv) {
   const things = ["sword", "shield", "bluegoo", "crown", "redpotion", "blooddrop", "goldcoin", "castle", "crown"];
   const icons = document.querySelector(".icons");
+  const svgDoc = icons.getSVGDocument();
   
-  Object.keys(things).forEach(i => icons.getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
-  Object.keys(inv).forEach(i => icons.getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] !== true ? "hidden" : "visible" )
+  Object.keys(things).forEach(i => svgDoc.getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
+  Object.keys(inv).forEach(i => svgDoc.getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
 }
 
 function showTextNode(textNodeIndex) {
