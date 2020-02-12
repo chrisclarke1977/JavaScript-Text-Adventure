@@ -11,7 +11,7 @@ function startGame() {
 }
 
 function showInv(inv) {
-  const things = ["sword", "shield", "bluegoo", "crown", "redpotion", "blooddrop", "goldcoin", "castle", "crown"];
+  const things = ["sword", "shield", "bluegoo", "crown", "redpotion", "blooddrop", "goldcoin", "castle", "crown", "helmet"];
   const icons = document.querySelector(".icons");
   const svgDoc = icons.getSVGDocument();
   
