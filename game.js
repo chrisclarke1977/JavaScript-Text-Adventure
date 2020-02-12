@@ -11,9 +11,20 @@ function startGame() {
   showTextNode(1)
 }
 
+function waitForElement(id, callback){
+    const haps = setInterval(function(){
+        if(document.querySelector(id)){
+            clearInterval(haps);
+            callback();
+        }
+    }, 100);
+}
+
 function showInv(inv) {
-  things.map(i => document.querySelector(".icons").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
-  Object.keys(inv).forEach(i => document.querySelector(".icons").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
+  waitForElement(".icons", function(){
+    things.map(i => document.querySelector(".icons").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
+    Object.keys(inv).forEach(i => document.querySelector(".icons").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
+  });
 }
 
 function showTextNode(textNodeIndex) {
