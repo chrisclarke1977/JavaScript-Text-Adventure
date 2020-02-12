@@ -1,3 +1,7 @@
+/** 
+Set up some global constants for the game
+*/
+
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const inventoryElement = document.getElementById('inventory')
