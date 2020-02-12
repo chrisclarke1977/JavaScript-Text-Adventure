@@ -15,7 +15,7 @@ function showInv(inv) {
   const icons = document.querySelector(".icons");
   const svgDoc = icons.getSVGDocument;
   
-  Object.keys(things).forEach(i => svgDoc().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
+  things.map(i => svgDoc().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
   Object.keys(inv).forEach(i => svgDoc().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
 }
 
