@@ -258,4 +258,4 @@ const textNodes = [
   }
 ]
 
-startGame();
+window.onload = startGame();
