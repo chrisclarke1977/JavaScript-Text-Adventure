@@ -2,7 +2,6 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const inventoryElement = document.getElementById('inventory')
 const things = ["sword", "shield", "bluegoo", "crown", "redpotion", "blooddrop", "goldcoin", "castle", "crown", "helmet"];
-const svgDoc = document.querySelector(".icons").getSVGDocument();
 
 let state = {}
 
@@ -13,6 +12,8 @@ function startGame() {
 }
 
 function showInv(inv) {
+  const svgDoc = document.querySelector(".icons").getSVGDocument();
+
   things.map(i => svgDoc.getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
   Object.keys(inv).forEach(i => svgDoc.getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
 }
