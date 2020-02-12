@@ -6,8 +6,8 @@ let state = {}
 
 function startGame() {
   state = {}
-  showTextNode(1)
   showInv({})
+  showTextNode(1)
 }
 
 function showInv(inv) {
