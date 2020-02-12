@@ -2,8 +2,7 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const inventoryElement = document.getElementById('inventory')
 const things = ["sword", "shield", "bluegoo", "crown", "redpotion", "blooddrop", "goldcoin", "castle", "crown", "helmet"];
-const icons = document.querySelector(".icons");
-const svgDoc = icons.getSVGDocument();
+const svgDoc = document.querySelector(".icons").getSVGDocument();
 
 let state = {}
 
