@@ -12,10 +12,8 @@ function startGame() {
 }
 
 function showInv(inv) {
-  const svgDoc = document.querySelector(".icons").getSVGDocument();
-
-  things.map(i => svgDoc.getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
-  Object.keys(inv).forEach(i => svgDoc.getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
+  things.map(i => document.querySelector(".icons").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = "hidden" )
+  Object.keys(inv).forEach(i => document.querySelector(".icons").getSVGDocument().getElementById(i.toLowerCase()+'-icon').style.visibility = state[i] ? "visible" : "hidden" )
 }
 
 function showTextNode(textNodeIndex) {
